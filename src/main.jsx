@@ -4,7 +4,6 @@ import App from './App.jsx'
 import { ChakraProvider } from '@chakra-ui/react'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import TableComponent from './components/TableComponent.jsx';
-import GameMatch from './components/GameMatch.jsx';
 import './index.css'
 
 const router = createBrowserRouter([
@@ -15,10 +14,6 @@ const router = createBrowserRouter([
   {
     path: '/games-matches',
     element: <TableComponent />
-  },
-  {
-    path: '/game-match',
-    element: <GameMatch />
   }
 ]);
 

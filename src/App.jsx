@@ -7,30 +7,31 @@ export default function App() {
 
   return (
     <>
-      <Heading lineHeight='tall'>
-        <Highlight
-          query='board games matches'
-          styles={{ px: '2', py: '1', rounded: 'full', bg: 'red.100' }}
-        >
-          Register your board games matches.
-        </Highlight>
-      </Heading>
-      <br />
-      <Flex alinItems='center' justifyContent='center'>
-        <Stack spacing={1} direction='row'>
-          <Input variant='outline' placeholder='Game' w='250px' h='40px' />
-          <Link to='/games-matches'>
-            <IconButton
-              w='40px' 
-              h='40px'
-              colorScheme='blue'
-              aria-label='Search board game match'
-              icon={<SearchIcon />}
-            />
-          </Link>
-        </Stack>
-      </Flex>
-      
+      <div className='home'>
+        <Heading lineHeight='tall'>
+          <Highlight
+            query='board games matches'
+            styles={{ px: '2', py: '1', rounded: 'full', bg: 'red.100' }}
+          >
+            Register your board games matches.
+          </Highlight>
+        </Heading>
+        <br />
+        <Flex alignItems='center' justifyContent='center'>
+          <Stack spacing={1} direction='row'>
+            <Input variant='outline' placeholder='Game' w='250px' h='40px' />
+            <Link to='/games-matches'>
+              <IconButton
+                w='40px' 
+                h='40px'
+                colorScheme='blue'
+                aria-label='Search board game match'
+                icon={<SearchIcon />}
+              />
+            </Link>
+          </Stack>
+        </Flex>
+      </div>
     </>
   )
 }
