@@ -1,10 +1,15 @@
 # Board games app
 
-A project to control board games made with vite + react.
+A project to control board games matches made with vite + react.
 
-It's possible register, search, update and delete a game match.
+## Version 1.0.0
 
-Documentation used:
+- Add
+- Search
+- Update
+- Delete
+
+## Documentation used
 
 - [Vite](https://vitejs.dev/)
 - [React](https://react.dev/learn)
