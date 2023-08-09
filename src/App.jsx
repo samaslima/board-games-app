@@ -19,7 +19,7 @@ export default function App() {
         <br />
         <Flex alignItems='center' justifyContent='center'>
           <Stack spacing={1} direction='row'>
-            <Input variant='outline' placeholder='Game' w='250px' h='40px' />
+            <Input variant='outline' placeholder='Serach' w='250px' h='40px' />
             <Link to='/games-matches'>
               <IconButton
                 w='40px' 
