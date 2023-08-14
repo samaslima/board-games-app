@@ -12,7 +12,7 @@ import {
     ModalCloseButton
 } from '@chakra-ui/react'
 
-export default function MatchModalComponent(props) {
+export default function AddMatch(props) {
 
     return (
         <>
