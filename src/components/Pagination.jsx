@@ -11,7 +11,7 @@ export default function Pagination(props) {
 
     return (
         <>
-            <Flex m={4} justifyContent='center' gap='35px'>
+            <Flex m={4} justifyContent='center' gap='35px' alignItems='center'>
                 <Flex>
                     <Tooltip label='First Page'>
                         <IconButton
@@ -27,7 +27,7 @@ export default function Pagination(props) {
                         />
                     </Tooltip>
                 </Flex>
-                
+
                 {pageNumbers.map(page => 
                     <a 
                         key={page}
