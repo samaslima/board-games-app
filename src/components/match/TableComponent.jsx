@@ -15,10 +15,12 @@ import { EditIcon, DeleteIcon } from '@chakra-ui/icons'
 import UpdateMatch from './UpdateMatch'
 import Pagination from '../Pagination'
 import HeaderTable from './HeaderTable'
+import Dialog from '../Dialog'
 
 export default function TableComponent() {
 
-    const { isOpen, onOpen, onClose } = useDisclosure()
+    const { isOpen: isOpenUpdate, onOpen: onOpenUpdate, onClose: onCloseUpdate } = useDisclosure()
+    const { isOpen: isOpenDelete, onOpen: onOpenDelete, onClose: onCloseDelete } = useDisclosure()
 
     const itemsPerPage = 6
 
@@ -78,7 +80,7 @@ export default function TableComponent() {
                                                     aria-label='Edit'
                                                     mr={6}
                                                     icon={<EditIcon />}
-                                                    onClick={onOpen}
+                                                    onClick={onOpenUpdate}
                                                 />
                                             </Tooltip>
                                             <Tooltip label='Delete'>
@@ -86,6 +88,7 @@ export default function TableComponent() {
                                                     aria-label='Delete'
                                                     icon={<DeleteIcon />}
                                                     colorScheme='red'
+                                                    onClick={onOpenDelete}
                                                 />
                                             </Tooltip>
                                         </Td>
@@ -99,7 +102,12 @@ export default function TableComponent() {
                 <Pagination items={gameMatches.length} itemsPerPage={itemsPerPage} />
             </Box>
 
-            <UpdateMatch openModal={isOpen} closeModal={onClose} />
+            <UpdateMatch openModal={isOpenUpdate} closeModal={onCloseUpdate} />
+            <Dialog 
+                openModal={isOpenDelete}
+                closeModal={onCloseDelete}
+                dialogBody={`delete`}
+            />
         </>
     )
 }
