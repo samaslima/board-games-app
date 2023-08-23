@@ -10,7 +10,7 @@ import {
 } from '@chakra-ui/react'
 import { AddIcon, SearchIcon } from '@chakra-ui/icons'
 import { Link } from 'react-router-dom'
-import AddMatch from './AddMatch'
+import ModalMatch from '../ModalMatch'
 
 export default function HeaderTable() {
 
@@ -43,7 +43,12 @@ export default function HeaderTable() {
                 </Flex>
             </Box>
 
-            <AddMatch openModal={isOpen} closeModal={onClose} />
+            <ModalMatch 
+                openModal={isOpen} 
+                closeModal={onClose} 
+                modalHeader={`Register new match`}
+                nameButton={`Save`} 
+            />
         </>
     )
 }

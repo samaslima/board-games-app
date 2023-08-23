@@ -12,10 +12,10 @@ import {
     useDisclosure
 } from '@chakra-ui/react'
 import { EditIcon, DeleteIcon } from '@chakra-ui/icons'
-import UpdateMatch from './UpdateMatch'
 import Pagination from '../Pagination'
 import HeaderTable from './HeaderTable'
 import Dialog from '../Dialog'
+import ModalMatch from '../ModalMatch'
 
 export default function TableComponent() {
 
@@ -102,7 +102,12 @@ export default function TableComponent() {
                 <Pagination items={gameMatches.length} itemsPerPage={itemsPerPage} />
             </Box>
 
-            <UpdateMatch openModal={isOpenUpdate} closeModal={onCloseUpdate} />
+            <ModalMatch 
+                openModal={isOpenUpdate} 
+                closeModal={onCloseUpdate} 
+                modalHeader={`Update match`}
+                nameButton={`Update`} 
+            />
             <Dialog 
                 openModal={isOpenDelete}
                 closeModal={onCloseDelete}

@@ -12,7 +12,7 @@ import {
     ModalCloseButton
 } from '@chakra-ui/react'
 
-export default function AddMatch(props) {
+export default function ModalMatch(props) {
 
     return (
         <>
@@ -22,7 +22,7 @@ export default function AddMatch(props) {
             >
                 <ModalOverlay />
                 <ModalContent>
-                    <ModalHeader>Register a new match</ModalHeader>
+                    <ModalHeader>{props.modalHeader}</ModalHeader>
                     <ModalCloseButton />
                     <ModalBody pb={6}>
                         <FormControl mt={1}>
@@ -30,13 +30,13 @@ export default function AddMatch(props) {
                             <Input />
                         </FormControl>
 
-                        <FormControl>
-                            <FormLabel mt={4}>Winner</FormLabel>
+                        <FormControl mt={4}>
+                            <FormLabel>Players</FormLabel>
                             <Input />
                         </FormControl>
 
-                        <FormControl mt={4}>
-                            <FormLabel>Players</FormLabel>
+                        <FormControl>
+                            <FormLabel mt={4}>Winner</FormLabel>
                             <Input />
                         </FormControl>
 
@@ -47,14 +47,13 @@ export default function AddMatch(props) {
                     </ModalBody>
 
                     <ModalFooter>
-                        <Button colorScheme='blue' mr={3}>
-                            Save
+                        <Button onClick={props.closeModal} mr={3}>Cancel</Button>
+                        <Button colorScheme='blue'>
+                            {props.nameButton}
                         </Button>
-                        <Button onClick={props.closeModal}>Cancel</Button>
                     </ModalFooter>
                 </ModalContent>
             </Modal>
         </>
     )
-
 }
