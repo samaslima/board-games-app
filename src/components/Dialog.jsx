@@ -1,3 +1,5 @@
+import { useRef } from 'react'
+
 import {
     AlertDialog,
     AlertDialogBody,
@@ -7,7 +9,6 @@ import {
     AlertDialogOverlay,
     Button
   } from '@chakra-ui/react'
-import { useRef } from 'react'
 
 export default function Dialog(props) {
 
@@ -27,7 +28,7 @@ export default function Dialog(props) {
                         </AlertDialogHeader>
 
                         <AlertDialogBody>
-                            Are you sure you want to {props.dialogBody}? 
+                            Are you sure you want to this? 
                         </AlertDialogBody>
 
                         <AlertDialogFooter>

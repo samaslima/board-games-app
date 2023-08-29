@@ -9,10 +9,15 @@ import {
     ModalHeader,
     ModalFooter,
     ModalBody,
-    ModalCloseButton
+    ModalCloseButton,
+    useDisclosure
 } from '@chakra-ui/react'
 
+import Dialog from './Dialog'
+
 export default function ModalMatch(props) {
+
+    const { isOpen, onOpen, onClose } = useDisclosure()
 
     return (
         <>
@@ -48,12 +53,19 @@ export default function ModalMatch(props) {
 
                     <ModalFooter>
                         <Button onClick={props.closeModal} mr={3}>Cancel</Button>
-                        <Button colorScheme='blue'>
-                            {props.nameButton}
+                        <Button 
+                            colorScheme='blue' 
+                            onClick={onOpen}>
+                                {props.nameButton}
                         </Button>
                     </ModalFooter>
                 </ModalContent>
             </Modal>
+
+            <Dialog 
+                openModal={isOpen}
+                closeModal={onClose}
+            />
         </>
     )
 }

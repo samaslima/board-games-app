@@ -198,7 +198,6 @@ export default function TableComponent() {
             <Dialog 
                 openModal={isOpenDelete}
                 closeModal={onCloseDelete}
-                dialogBody={`delete`}
             />
         </>
     )
