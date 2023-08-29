@@ -4,7 +4,7 @@ A project to control board games matches made with vite + react.
 
 ## Version 1.0.0
 
-- add a new match
+- add new match
 
   ![add a new match](/assets/add-new-match.png)
 
@@ -15,6 +15,14 @@ A project to control board games matches made with vite + react.
 - list all matches
 
   ![update match](/assets/games-matches.png)
+
+- search match
+
+  ![search match](/assets/search.png)
+
+- delete match
+
+  ![delete match](/assets/delete.png)
 
 ## Documentation used
 
